@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="card" style="width: 18rem;">
+        <form action="/results" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="location">Dojo location</label>
+                <select class="form-control" name="location">
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="TX">Texas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="favlang">Favorite Language</label>
+                <select class="form-control" name="favlang">
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="js">Javascript</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments (optional)</label>
+                <input type="text" name="comments" id="comments">
+            </div>    
+            <input type="submit" class="btn btn-primary" value="submit">
+        </form>
+    </div>
+</body>
+</html>
