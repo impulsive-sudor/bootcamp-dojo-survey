@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Results</h1>
-    <p>Name: {{name}}</p>
-    <p>Location: {{location}}</p>
-    <p>Favorite Language: {{favlang}}</p>
-    <p>Comments: {{comments}}</p>
+    <p>Name: {{request.session.name}}</p>
+    <p>Location: {{request.session.location}}</p>
+    <p>Favorite Language: {{request.session.favlang}}</p>
+    <p>Comments: {{request.session.comments}}</p>
 </body>
 </html>
